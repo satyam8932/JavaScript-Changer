@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 class="heading">THIS IS MY JAVASCRIPT TUTORIAL.</h1>
+    <div id="para">Hello this is my paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, sequi alias assumenda ea nam vel fugit explicabo nesciunt blanditiis rerum molestias magni aperiam dolorem repellat porro dolor a perspiciatis consectetur!</div>
+    <button class="btn" onclick="hide()">Hide</button>
+    <button class="btn" onclick="popup()">Popup</button>
+    <button class="btn" onclick="textChanger()">Change</button>
+    <button class="btn" onclick="reset()">Reset</button>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .heading{
+            text-align: center;
+            /* justify-content: center; */
+            margin: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(73, 56, 56);
+            background-color: greenyellow;
+            border-radius: 12px;
+            box-shadow: 0px 0px 27px 5px rgb(56, 136, 41);
+        }
+
+        #para{
+            margin: 30px;
+            padding: 10px;
+            text-align: center;
+            /* justify-content: center; */
+            color: rgb(179, 19, 19);        
+            background-color: wheat;
+            border-radius: 7px;
+            box-shadow: 0px 0px 20px 8px rgb(184, 132, 132);
+        }
+
+        .btn{
+            margin-left: 40px;
+            padding: 5px;
+            width: 60px;
+            background-color: rgb(252, 184, 252);
+            border-radius: 8px;
+            border: 2px solid rgb(252, 184, 252);
+            color: rgb(255, 0, 0);
+            box-shadow: 0px 0px 27px 6px rgb(181, 121, 221);
+            cursor: pointer;
+            
+        }
+    </style>
+</body>
+  <script>
+        function hide(){
+            var para = document.getElementById('para');
+            if (para.style.display == "none"){
+                para.style.display = "block";
+                
+            } else {
+                para.style.display = "none";
+                document.getElementsByClassName("btn").innerHTML = "Show"
+                
+            }
+        }
+        
+        function popup(){
+            alert("This is Popup Created By Satyam")
+        }
+        
+        function textChanger(){
+            document.getElementById("para").innerHTML = "This is newly written text using JavaScript"
+            }
+
+        function reset(){
+            document.getElementById("para").innerHTML = "Hello this is my paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, sequi alias assumenda ea nam vel fugit explicabo nesciunt blanditiis rerum molestias magni aperiam dolorem repellat porro dolor a perspiciatis consectetur!"
+        }
+    </script>
+</html>
